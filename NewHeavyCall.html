@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dispatch</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="http://trackermanagement.com/images/branding/tracker-favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://trackermanagement.com/css/style.css">
+	<link rel="stylesheet" href="http://trackermanagement.com/css/responsive-style.css">
+	<link rel="stylesheet" href="dispatch.css">
+	<script src="dispatchActions.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+	            				<span class="sr-only">Toggle navigation</span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	          			</button>
+					<img id="navbar-logo" src="http://trackermanagement.com/images/branding/tracker-logo-white.png" alt="Tracker Logo">
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="Demo.html">Dispatch</a></li>
+						<li><a href="http://trackermanagement.com/help.php">Help</a></li>
+						<li><a href="http://trackermanagement.com/contact.php">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="Demo.html">Tracker</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row-fluid">
+					<form class="form-inline">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="panel panel-default" >
+									<div class="panel-heading">
+										<h4 class="tracker-header">Call Info</h4>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="row">
+												<label class="col-sm-2" for="rqedBy">Rqed by:</label>
+												<div class="col-sm-7">
+													<select class="form-control select" id="rqedBy">
+														<option value="temp">Temp</option>
+														<option value="temp">Temp</option>
+														<option value="temp">Temp</option>
+                                            		</select>
+												</div>
+												<label class="col-sm-1" for="pr">Pr:</label>
+												<div class="col-sm-2">
+													<input type="text" class="form-control text" name="pr" placeholder="1">
+												</div>
+											</div>
+											<div class="row">	
+												<label class="col-sm-2" for="phone">Phone: </label>
+												<div class="col-sm-6">
+													<input type="tel" class="form-control text" placeholder="(111)-111-1111" name="phone">
+												</div>
+
+												<label class="col-sm-1" for="ext">Ext: </label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" placeholder="1" id="ext">
+												</div>
+
+											</div>
+
+											<div class="row">
+												<label class="col-sm-2" for="caller">Caller: </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="caller">
+												</div>
+											</div>
+
+
+											<div class="row">
+												<label class="col-sm-2" for="ownerPhone">Caller Phone: </label>
+												<div class="col-sm-6">
+													<input type="tel" class="form-control text" placeholder="(111)-111-1111" id="ownerPhone">
+												</div>
+
+												<label class="col-sm-1" for="ownerExt">Ext: </label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" placeholder="1" id="ownerExt">
+												</div>
+											</div>
+											<div class="row">
+												<label class="col-sm-2" for="owner">Owner/ Driver: </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" id="owner">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="tracker-header">
+											Vehicle Info
+										</h4>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="row">
+												<label class="col-sm-2" for="year">Year:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" id="year">
+												</div>
+											</div>
+											<div class="row">
+												<label class="col-sm-2" for="make">Make:</label>
+												<div class="col-sm-4">
+													<select class="form-control" id="make">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+												</div>
+												<label class="col-sm-2" for="model">Model:</label>
+												<div class="col-sm-4">
+													<select class="form-control" id="model">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+												</div>
+											</div>
+
+
+
+											<div class="row">
+												<label class="col-sm-2" for="style">Style:</label>
+												<div class="col-sm-4">
+													<select class="form-control" id="style">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+												</div>
+												<label class="col-sm-2" for="color">Color:</label>
+												<div class="col-sm-4">
+													<select class="form-control" id="color">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+												</div>
+											</div>
+
+											<div class="row">
+												<label class="col-sm-2" for="vin">V.I.N.: </label>
+												<div class="col-sm-7">
+													<input type="text" class="form-control text" id="usr">
+												</div>
+												<div class="col-sm-3">
+													<button class="btn btn-default">Verify</button>
+												</div>
+											</div>
+
+											<div class="row">
+												<label class="col-sm-2" for="licenseNum">License #: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="licenseNum">
+												</div>
+
+												<label class="col-sm-1" for="licenseState">State:</label>
+												<div class="col-sm-3">
+													<select class="form-control" id="licenseState">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                    </select>
+												</div>
+											</div>
+											<div class="row">
+												<label class="col-sm-2" for="odometer">Odometer: </label>
+												<div class="col-sm-6">
+													<input type="text" class="form-control text" id="odometer">
+												</div>
+											</div>
+
+											<div class="row">
+												<label class="col-sm-1" for="keys">Keys? </label>
+												<div class="col-sm-1">
+													<input type="checkbox" id="keys" value=""></label>
+												</div>
+												<label class="col-sm-2" for="keysLocation">Location:</label>
+												<div class="col-sm-7">
+													<select class="form-control" id="keyLocation">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                    </select>
+												</div>
+											</div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="engineType">Engine Type: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="engineType">
+												</div>
+
+                                                <label class="col-sm-2" for="tireSize">Tire Size: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="tireSize">
+												</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="goodUnitNum">Good Unit #: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="goodUnitNum">
+												</div>
+
+                                                <label class="col-sm-2" for="badUnitNum">Bad Unit #: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="badUnitNum">
+												</div>
+                                            </div>
+
+
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="loaded">Loaded? </label>
+												<div class="col-sm-1">
+													<input type="checkbox" id="loaded" value=""></label>
+												</div>
+
+                                                <label class="col-sm-2" for="trailer">Trailer? </label>
+												<div class="col-sm-1">
+													<input type="checkbox" id="trailer" value=""></label>
+												</div>
+
+                                                <label class="col-sm-2" for="dotHold">D.O.T. Hold? </label>
+												<div class="col-sm-1">
+													<input type="checkbox" id="dotHold" value=""></label>
+												</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="trailerHeight">Trailer Height: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="trailerHeight">
+												</div>
+
+                                                <label class="col-sm-2" for="trailerHeight">Trailer Weight: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="trailerHeight">
+												</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="trailerWidth">Trailer Width: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="trailerWidth">
+												</div>
+
+                                                <label class="col-sm-2" for="trailerNumber">Trailer Number: </label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control text" id="trailerNumber">
+												</div>
+                                            </div>
+
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="tracker-header">
+												Tow Info
+											</h4>
+										</div>
+										<div class="panel-body">
+											<div class="townInfo">
+												<div class="form-group">
+													<div class="row">
+														<label class="col-sm-2" for="location">Location: </label>
+														<div class="col-sm-10">
+															<div class="input-group">
+																<input type="text" class="form-control text" id="location">
+																<span class="input-group-btn">
+                                                            <button class="btn btn-default" type="button">View Map</button></span>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<label class="col-sm-2" for="city">City/St/Zip: </label>
+
+														<div class="col-sm-3">
+															<select class="form-control" id="city">
+                                                                 <option value="temp">Temp</option>
+                                                                <option value="temp">Temp</option>
+                                                                <option value="temp">Temp</option>
+                                                             </select>
+														</div>
+
+														<div class="col-sm-3">
+															<select class="form-control" id="state">
+																<option value="temp">OH</option>
+																<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+															</select>
+														</div>
+
+														<div class="col-sm-3">
+															<input type="text" class="form-control text" id="zip">
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="landmark">Landmark: </label>
+													<div class="col-sm-10">
+														<div class="input-group">
+															<input type="text" class="form-control text" id="landmark">
+															<span class="input-group-btn">
+                                                            <button class = "btn btn-default" type = "button">Map</button></span>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="row">
+													<label class="col-sm-2" for="destination">Destination: </label>
+													<div class="col-sm-10">
+														<div class="input-group">
+															<input type="text" class="form-control text" id="destination">
+															<span class="input-group-btn">
+                                                            <button class = "btn btn-default" type = "button">Map</button></span>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<label class="col-sm-2" for="cityDest">City/St/Zip: </label>
+													<div class="col-sm-3">
+														<select class="form-control" id="cityDest">
+															<option value="temp">Temp</option>
+															<option value="temp">Temp</option>
+															<option value="temp">Temp</option>
+														</select>
+													</div>
+
+													<div class="col-sm-3">
+														<select class="form-control" id="stateDest">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+
+													<div class="col-sm-3">
+														<input type="text" class="form-control text" id="destZip">
+													</div>
+												</div>
+					
+
+												<div class="row">
+													<!--<label class="col-sm-2 checkbox-inline" for="impound">Impound
+														<input type="checkbox" id="impound" value="">
+													</label>-->
+
+
+													<!--<label class="col-sm-2 checkbox-inline"><input type="checkbox" id="impound" value="">Impound</label>-->
+													<!--<div class="col-sm-2 checkbox-inline">
+														<div class="checkbox-inline" >
+															<label ><input type="checkbox" id="impound" value="">Impound</label>
+														</div>
+													</div>-->
+
+													<label class="col-sm-2" for="lot">Impound:</label>
+													<div class="col-sm-2">
+														<select class="form-control" id="lot">
+                                                            <option value="temp">No</option>
+                                                            <option value="temp">Yes</option>
+                                                        </select>
+													</div>
+
+													<label class="col-sm-1" for="lot">Lot:</label>
+													<div class="col-sm-2">
+														<select class="form-control" id="lot">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+
+													<label class="col-sm-2" for="reason">Reason:</label>
+													<div class="col-sm-3">
+														<select class="form-control" id="reason">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+												</div>
+
+
+												<div class="row">
+													<label class="col-sm-2" for="towType">Tow Type:</label>
+													<div class="col-sm-10">
+														<select class="form-control" id="towType">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="eta">ETA: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="eta">
+													</div>
+													<label class="col-sm-2" for="truckType">Truck Type Required:</label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="usr">
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="locationZone">Location Zone:</label>
+													<div class="col-sm-4">
+														<select class="form-control" id="locationZone">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+
+													<label class="col-sm-2" for="destZone">Destination Zone:</label>
+													<div class="col-sm-4">
+														<select class="form-control" id="destZone">
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="scheduledDate">Scheduled Date: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="usr">
+													</div>
+
+
+													<label class="col-sm-1" for="usr">Time: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="usr">
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="status">Status:   </label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control text" id="status">
+													</div>
+												</div>
+
+												<div class="row">
+													<button type="button" class="btn btn-primary" data-target="#remarks" data-toggle="collapse">Add Remark</button>
+
+													<div id="remarks" class="collapse">
+														<div class="row">
+															<label class="col-sm-2" for="remark">Remarks </label>
+															<div class="col-sm-10">
+																<input type="text" class="form-control text" id="remark">
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-2"></div>
+															<div class="col-sm-10">
+																<input type="text" class="form-control text" id="remark2">
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-sm-6">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="tracker-header">
+												Billing Info
+											</h4>
+										</div>
+										<div class="panel-body">
+											<div class="form-group">
+												<div class="row">
+													<label class="col-sm-2" for="billTo">Bill to: </label>
+													<div class="col-sm-6">
+														<select class="form-control" id="billTo">
+                                                            <option value="temp">Temp</option>
+                                                           <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+													<div class="col-sm-4">
+														<button class="btn btn-default">Pre-Auth CC</button>
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="payMeth">Pay Method:</label>
+													<div class="col-sm-3">
+														<select class="form-control" id="payMeth">
+                                                            <option value="temp">Temp</option>
+                                                           <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+													<label class="col-sm-2" for="preAuth">Pre-Authorization #: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="preAuth">
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="creditNum">Credit Card: </label>
+													<div class="col-sm-5">
+														<input type="text" class="form-control text" id="creditNum">
+													</div>
+													<label class="col-sm-1" for="expdate">Exp. Date: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="expdate">
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="billZip">Billing Zip:</label>
+													<div class="col-sm-5">
+														<input type="text" class="form-control text" id="billZip">
+													</div>
+													<label class="col-sm-1" for="cv2">CV2: </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="cv2">
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="purchOrder">Purch Ord:</label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="purchorder">
+													</div>
+                                                    <label class="col-sm-2" for="pricingMode">Pricing Mode: </label>
+													<div class="col-sm-3">
+														<select class="form-control" id="pricingMode">
+                                                            <option value="temp">Temp</option>
+                                                           <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
+                                                        </select>
+													</div>
+												</div>
+
+												<div class="row">
+													<label class="col-sm-2" for="memberNum">Member #:</label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control text" id="memberNum">
+													</div>
+													<label class="col-sm-1" for="memberExp">Exp: </label>
+													<div class="col-sm-3">
+														<input type="text" class="form-control text" id="memberExp">
+													</div>
+												</div>
+								
+
+											<div class="row">
+												<button type="button" class="btn btn-primary" data-target="#comments" data-toggle="collapse">Add Comment</button>
+												<div id="comments" class="collapse">
+													<div class="form-group">
+														<label for="comment">Comment:</label>
+														<textarea class="form-control" rows="5" id="comment"></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

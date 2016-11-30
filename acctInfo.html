@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dispatch</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="http://trackermanagement.com/images/branding/tracker-favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://trackermanagement.com/css/style.css">
+	<link rel="stylesheet" href="http://trackermanagement.com/css/responsive-style.css">
+	<link rel="stylesheet" href="dispatch.css">
+	<script src="dispatchActions.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+	            				<span class="sr-only">Toggle navigation</span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	          			</button>
+					<img id="navbar-logo" src="http://trackermanagement.com/images/branding/tracker-logo-white.png" alt="Tracker Logo">
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="Demo.html">Dispatch</a></li>
+						<li><a href="http://trackermanagement.com/help.php">Help</a></li>
+						<li><a href="http://trackermanagement.com/contact.php">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="Demo.html">Tracker</a>
+				</div>
+			</div>
+		</nav>
+        <div class="container-fluid">
+					<form class="form-inline">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="panel panel-default" >
+									<div class="panel-heading">
+										<h4 class="tracker-header">Account</h4>
+									</div>
+									<div class="panel-body ">
+										<div class="form-group">
+
+											<div class="row">
+                                                <label class="col-sm-2" for="code">Code:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="code">
+												</div>
+
+                                                <label class="col-sm-2" for="name">Name:</label>
+												<div class="col-sm-5">
+													<input type="text" class="form-control text" name="name">
+												</div>
+											</div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="contact">Contact:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="contact">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-3" for="auth">Authorization:</label>
+												<div class="col-sm-2">
+													<input type="text" class="form-control text" name="auth">
+												</div>
+
+                                                <label class="col-sm-2" for="status">Status:</label>
+												<div class="col-sm-2">
+													<input type="text" class="form-control text" name="status">
+												</div>
+
+                                                <label class="col-sm-1" for="po">P.O. Required </label>
+												<div class="col-sm-1">
+													<input type="checkbox" id="po" value=""></label>
+												</div>
+
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-2" for="phone">Phone:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="phone">
+												</div>
+
+                                                <label class="col-sm-1" for="ext">Ext:</label>
+												<div class="col-sm-2">
+													<input type="text" class="form-control text" name="ext">
+												</div>
+
+                                                <label class="col-sm-1" for="fax">Fax:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="fax">
+												</div>
+                                            </div>
+										</div>  
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="row">
+                            <div class="col-sm-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="tracker-header">
+											Billing Info
+										</h4>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="row">
+
+                                                <label class="col-sm-2" for="address">Address:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="address">
+												</div>
+											</div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="address2"></label>
+                                                <div class="col-sm-10">
+													<input type="text" class="form-control text" name="address2">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="city">City:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="city">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2">State/Zip:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="state">
+												</div>
+                                                <div class="col-sm-3">
+													<input type="text" class="form-control text" name="zip">
+												</div>
+                                            </div>
+
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="tracker-header">
+											Physical Address
+										</h4>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="row">
+                                                <label class="col-sm-2" for="address">Address:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="address">
+												</div>
+											</div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="address2"></label>
+                                                <div class="col-sm-10">
+													<input type="text" class="form-control text" name="address2">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2" for="city">City:</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control text" name="city">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2">State/Zip:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="state">
+												</div>
+                                                <div class="col-sm-3">
+													<input type="text" class="form-control text" name="zip">
+												</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <label class="col-sm-2">Phone:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="phone">
+												</div>
+
+                                                <label class="col-sm-1">Ext:</label>
+												<div class="col-sm-3">
+													<input type="text" class="form-control text" name="ext">
+												</div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+				</form>
+			</div>
+
+           <button class="btn btn-primary" data-toggle="collapse" data-target="#moreOptions">More Options</button>
+         <div id="moreOptions" class="collapse">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="Search.html" class="btn btn-primary btn-block" id="search">Search</a>
+                </div>
+                <div class="col-sm-2">  
+                    <a href="Rates.html" class="btn btn-primary btn-block" id="rates">Rates</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="MiscCharges.html" class="btn btn-primary btn-block" id="miscCharges">Misc Charges</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">  
+                    <a href="CurrentCall.html" class="btn btn-primary btn-block" id="dispDefault">Disp Defaults</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="CreditDetail" class="btn btn-primary btn-block" id="creditDetail">Credit Detail</a>
+                </div>
+                <div class="col-sm-2">    
+                    <a href="LastTow.html" class="btn btn-primary btn-block" id="lastTow">Last Tow</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="Noteshtml" class="btn btn-primary btn-block" id="notes">Notes</a>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        
+</body>

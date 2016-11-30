@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dispatch</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="http://trackermanagement.com/images/branding/tracker-favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://trackermanagement.com/css/style.css">
+  <link rel="stylesheet" href="http://trackermanagement.com/css/responsive-style.css">
+  <link rel="stylesheet" href="dispatch.css">
+  <script src="dispatchActions.js"></script>
+  <script src="demo.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+			<div class="container-fluid">
+	        		<div class="navbar-header">
+	          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            				<span class="sr-only">Toggle navigation</span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	            				<span class="icon-bar"></span>
+	          			</button>
+	          			<img id="navbar-logo" src="http://trackermanagement.com/images/branding/tracker-logo-white.png" alt="Tracker Logo">
+	        		</div>
+	        		<div id="navbar" class="navbar-collapse collapse">
+	          			<ul class="nav navbar-nav">
+	          			</ul>
+	          			<ul class="nav navbar-nav navbar-right">
+                            <li><a href="Demo.html">Dispatch</a></li>
+	            			<li><a href="http://trackermanagement.com/help.php">Help</a></li>
+	            			<li><a href="http://trackermanagement.com/contact.php">Contact</a></li>
+	          			</ul>
+	        		</div>
+	      		</div>
+	    	</nav>  
+<nav class="navbar navbar-inverse">
+  <div class="container">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="Demo.html">Tracker</a>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+        <a href="NewCalls.html" class="btn btn-primary btn-block" id="newCall">New Call</a>
+    </div>
+            
+    <div class="col-sm-2">    
+        <a href="NewHeavyCall.html" class="btn btn-primary btn-block" id="newHeavyCall">New Heavy Call</a>
+    </div>
+       
+    <div class="col-sm-2">
+        <a href="NewPoliceCall.html" class="btn btn-primary btn-block" id="newPoliceCall">New Police Call</a>
+    </div>
+    <div class="col-sm-2">
+        <a href="NewTransportCall.html" class="btn btn-primary btn-block" id="newTransportCall">New Transport Call</a>
+    </div>
+   <div class="col-sm-9 offset-sm-3 calls-table">
+        <div class="table-responsive ">
+            <table class="table table-striped table-bordered calls-table" id="callsTable">
+                <thead>
+                    <tr>
+                        <th>Call#</th>
+                        <th>Pri</th>
+                        <th>Reqd By</th>
+                        <th>Stage</th>
+                        <th>Dr</th>
+                        <th>Truck</th>
+                        <th>Zone</th>
+                        <th>Location</th>
+                        <th>Reason</th>
+                        <th>Time</th>
+                        <th>Elapsed</th>
+                        <th>Status</th>
+                        <th>Destination</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#moreOptions">More Options</button>
+
+        <div id="moreOptions" class="collapse">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="#" class="btn btn-primary btn-block" id="refresh">Refresh</a>
+                </div>
+                <div class="col-sm-2">  
+                    <!--just open new call window and populate?  -->
+                    <a href="#" class="btn btn-primary btn-block" id="update">Update</a>
+                </div>
+                <div class="col-sm-2">
+                    <!--Sort How? This feels like this should be a seperate drop down menu-->
+                    <a href="#" class="btn btn-primary btn-block" id="sort">Sort</a>
+                </div>
+                <div class="col-sm-2">  
+                    <!--open new current call pop up  -->
+                    <a data-toggle="modal" data-target="#myModal" href="CurrentCall.html" class="btn btn-info btn-primary btn-block" id="view">View</a>
+                </div>
+                <div class="col-sm-2">
+                    <!--print functionality on computer?-->
+                    <a href="#" class="btn btn-primary btn-block" id="printCalls">Print Calls</a>
+                </div>
+                <div class="col-sm-2">    
+                    <a href="notepad.html" class="btn btn-primary btn-block" id="notepad">Notepad</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="activeTrucks.html" class="btn btn-primary btn-block" id="activeTrucks">Active Trucks</a>
+                </div>
+                <div class="col-sm-2">    
+                    <a href="trucks.html" class="btn btn-primary btn-block" id="trucks">Trucks</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="acctInfo.html" class="btn btn-primary btn-block" id="acctInfo">Acct Info</a>
+                </div>
+                <div class="col-sm-2">    
+                    <a href="truckStatus.html" class="btn btn-primary btn-block" id="truckStatus">Truck Status</a>
+                </div>
+                <div class="col-sm-2">
+                    <!--filter the options persented-->
+                    <a href="#" class="btn btn-primary btn-block" id="filter">Filter</a>
+                </div>
+                <div class="col-sm-2"> 
+                    <!--what does this do???   -->
+                    <a href="#" class="btn btn-primary btn-block" id="recall">Recall</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">    
+                    <a href="messages.html" class="btn btn-primary btn-block" id="messages">Messages</a>
+                </div>
+            </div>
+            </div>
+        
+        </div>
+        <div class="col-sm-3 on-duty">
+            <h3 class="tracker-header">On Duty Trucks</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="onDutyTable">
+                        <thead>
+                            <tr>
+                                <th>Truck</th>
+                                <th>Type</th>
+                                <th>Dr</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        </div>
+        </div>
+   </div>
+ <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
+
+</body>
+</html>
+
