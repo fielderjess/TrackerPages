@@ -44,42 +44,24 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="centering text-center container" id="filterContainer">
     <div class="row-fluid">
-        <div class="row">
-            <div class="col-sm-6 on-duty">
-                    <h3 class="tracker-header">Off Duty Trucks</h3>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="offDutyTable">
-                            <thead>
-                                <tr>
-                                    <th>Truck</th>
-                                    <th>Type</th>
-                                    <th>Dr</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
+        <div class="row centering text-center">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 filter ">
+                <h4 class="filterText">Your terminal will display only the calls in the zone(s) beginning with the following characters:</h4>
+                <div class="col-sm-7 input-group centering">
+                    <input type="text" class="form-control" placeholder="Zone">
+                </div>
+                <div class="col-sm-7 input-group centering">
+                    <input type="text" class="form-control" placeholder="Screen Title">
+                </div>
+                    <div class="col-sm-5 btn-group centering" role="group" id="buttonGroupFilter">
+                        <button type="button" class="btn btn-default">Save</button>
+                        <button type="button" class="btn btn-default">Delete</button>
+                        <button type="button" class="btn btn-default">Cancel</button>
                     </div>
-                    <h3 id="numOffDuty">Num Off Duty</h3>
-            </div>
-            <div class="col-sm-6 on-duty">
-                    <h3 class="tracker-header">On Duty Trucks</h3>
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="onDutyTable">
-                                <thead>
-                                    <tr>
-                                        <th>Truck</th>
-                                        <th>Type</th>
-                                        <th>Dr</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                        <h3 id="numOnDuty">Num On Duty</h3>
+                </div><!-- /input-group -->
             </div>
         </div>
     </div>

@@ -87,3 +87,16 @@ label {
     margin-top: 0%;
     padding-top: 0%;
 }
+
+.filterContainer {
+    align-content: center;
+}
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
+
+.buttonGroupFilter{
+    margin-left: 20%;
+}
