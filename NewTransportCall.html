@@ -50,501 +50,251 @@
 		<div class="container">
 			<div class="row-fluid">
 					<form class="form-inline">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="panel panel-default" >
-									<div class="panel-heading">
-										<h4 class="tracker-header">Call Info</h4>
+						
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col-sm-3">
 									</div>
-									<div class="panel-body">
-										<div class="form-group">
-											<div class="row">
-												<label class="col-sm-2" for="rqedBy">Rqed by:</label>
-												<div class="col-sm-7">
-													<select class="form-control select" id="rqedBy">
-														<option value="temp">Temp</option>
-														<option value="temp">Temp</option>
-														<option value="temp">Temp</option>
-                                            		</select>
-												</div>
-												<label class="col-sm-1" for="pr">Pr:</label>
-												<div class="col-sm-2">
-													<input type="text" class="form-control text" name="pr" placeholder="1">
+									<div class="col-sm-6">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="tracker-header">Call Info</h4>
+											</div>
+											<div class="panel-body">
+												<div class="form-group">
+													<div class="row">
+														<label class="col-sm-2" for="rqedBy">Rqed by:</label>
+														<div class="col-sm-7">
+															<select class="form-control select" id="rqedBy">
+																<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+															</select>
+														</div>
+														<label class="col-sm-1" for="pr">Pr:</label>
+														<div class="col-sm-2">
+															<input type="text" class="form-control text" name="pr" placeholder="1">
+														</div>
+													</div>
+													<div class="row">	
+														<label class="col-sm-2" for="phone">Phone: </label>
+														<div class="col-sm-6">
+															<input type="tel" class="form-control text" placeholder="(111)-111-1111" name="phone">
+														</div>
+
+														<label class="col-sm-1" for="ext">Ext: </label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control text" placeholder="1" id="ext">
+														</div>
+
+													</div>
+
+													<div class="row">
+														<label class="col-sm-2" for="caller">Caller: </label>
+														<div class="col-sm-10">
+															<input type="text" class="form-control text" name="caller">
+														</div>
+													</div>
+
+
+													<div class="row">
+														<label class="col-sm-2" for="ownerPhone">Caller Phone: </label>
+														<div class="col-sm-6">
+															<input type="tel" class="form-control text" placeholder="(111)-111-1111" id="ownerPhone">
+														</div>
+
+														<label class="col-sm-1" for="ownerExt">Ext: </label>
+														<div class="col-sm-3">
+															<input type="text" class="form-control text" placeholder="1" id="ownerExt">
+														</div>
+													</div>
+													<div class="row">
+														<label class="col-sm-2" for="pointOfContact">Point of Contact: </label>
+														<div class="col-sm-10">
+															<input type="text" class="form-control text" id="pointOfContact">
+														</div>
+													</div>
 												</div>
 											</div>
-											<div class="row">	
-												<label class="col-sm-2" for="phone">Phone: </label>
-												<div class="col-sm-6">
-													<input type="tel" class="form-control text" placeholder="(111)-111-1111" name="phone">
-												</div>
-
-												<label class="col-sm-1" for="ext">Ext: </label>
-												<div class="col-sm-3">
-													<input type="text" class="form-control text" placeholder="1" id="ext">
-												</div>
-
-											</div>
-
-											<div class="row">
-												<label class="col-sm-2" for="caller">Caller: </label>
-												<div class="col-sm-10">
-													<input type="text" class="form-control text" name="caller">
-												</div>
-											</div>
-
-
-											<div class="row">
-												<label class="col-sm-2" for="ownerPhone">Caller Phone: </label>
-												<div class="col-sm-6">
-													<input type="tel" class="form-control text" placeholder="(111)-111-1111" id="ownerPhone">
-												</div>
-
-												<label class="col-sm-1" for="ownerExt">Ext: </label>
-												<div class="col-sm-3">
-													<input type="text" class="form-control text" placeholder="1" id="ownerExt">
-												</div>
-											</div>
-											<div class="row">
-												<label class="col-sm-2" for="pointOfContact">Point of Contact: </label>
-												<div class="col-sm-10">
-													<input type="text" class="form-control text" id="pointOfContact">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="tracker-header">
-											Vehicle Info
-										</h4>
-									</div>
-									<div class="panel-body">
-										<div class="form-group">
-											<div class="row">
-												<label class="col-sm-2" for="make">Make:</label>
-												<div class="col-sm-4">
-													<select class="form-control" id="make">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-												</div>
-												<label class="col-sm-2" for="model">Model:</label>
-												<div class="col-sm-4">
-													<select class="form-control" id="model">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-												</div>
-											</div>
-
-
-
-											<div class="row">
-												<label class="col-sm-2" for="style">Style:</label>
-												<div class="col-sm-4">
-													<select class="form-control" id="style">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-												</div>
-												<label class="col-sm-2" for="color">Misc:</label>
-												<div class="col-sm-4">
-													<select class="form-control" id="color">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-												</div>
-											</div>
-
-											<div class="row">
-												<label class="col-sm-2" for="serialNum">Serial #: </label>
-												<div class="col-sm-7">
-													<input type="text" class="form-control text" id="serialNum">
-												</div>
-												<div class="col-sm-3">
-													<button class="btn btn-default">Verify</button>
-												</div>
-											</div>
-
-											<div class="row">
-												<label class="col-sm-2" for="licenseNum">License #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="licenseNum">
-												</div>
-
-												<label class="col-sm-1" for="licenseState">State:</label>
-												<div class="col-sm-3">
-													<select class="form-control" id="licenseState">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                    </select>
-												</div>
-											</div>
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="odometer">Odometer: </label>
-												<div class="col-sm-6">
-													<input type="text" class="form-control text" id="odometer">
-												</div>
-                                            </div>
-
-											<div class="row">
-												<label class="col-sm-1" for="keys">Keys? </label>
-												<div class="col-sm-1">
-													<input type="checkbox" id="keys" value=""></label>
-												</div>
-												<label class="col-sm-2" for="keysLocation">Location:</label>
-												<div class="col-sm-8">
-													<select class="form-control" id="keyLocation">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                    </select>
-												</div>
-											</div>
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="unitNum1">Unit #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="unitNum1">
-												</div>
-
-                                                <label class="col-sm-2" for="unitNum2">Unit #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="unitNum2">
-												</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="unitNum3">Unit #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="unitNum3">
-												</div>
-
-                                                <label class="col-sm-2" for="unitNum4">Unit #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="unitNum4">
-												</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="batteryNum1">Battery #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="batteryNum1">
-												</div>
-
-                                                <label class="col-sm-2" for="batteryNum2">Battery #: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="batteryNum2">
-												</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="height">Height: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="height">
-												</div>
-
-                                                <label class="col-sm-2" for="weight">Weight: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="weight">
-												</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="width">Width: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="width">
-												</div>
-
-                                                <label class="col-sm-2" for="misc">Misc: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="misc">
-												</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <label class="col-sm-2" for="note1">Note 1: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="note1">
-												</div>
-
-                                                <label class="col-sm-2" for="note2">Note 2: </label>
-												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="note2">
-												</div>
-                                            </div>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="col-sm-6">
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="tracker-header">
-												Tow Info
-											</h4>
-										</div>
-										<div class="panel-body">
-											<div class="townInfo">
+								<div class="col-sm-12">
+									<div class="col-sm-3">
+									</div>
+									<div class="col-sm-6">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="tracker-header">
+													Vehicle Info
+												</h4>
+											</div>
+											<div class="panel-body">
 												<div class="form-group">
 													<div class="row">
-														<label class="col-sm-2" for="location">Location: </label>
-														<div class="col-sm-10">
-															<div class="input-group">
-																<input type="text" class="form-control text" id="location">
-																<span class="input-group-btn">
-                                                            <button class="btn btn-default" type="button">View Map</button></span>
-															</div>
+														<label class="col-sm-2" for="make">Make:</label>
+														<div class="col-sm-4">
+															<select class="form-control" id="make">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+														</div>
+														<label class="col-sm-2" for="model">Model:</label>
+														<div class="col-sm-4">
+															<select class="form-control" id="model">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+														</div>
+													</div>
+
+
+
+													<div class="row">
+														<label class="col-sm-2" for="style">Style:</label>
+														<div class="col-sm-4">
+															<select class="form-control" id="style">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+														</div>
+														<label class="col-sm-2" for="color">Misc:</label>
+														<div class="col-sm-4">
+															<select class="form-control" id="color">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
 														</div>
 													</div>
 
 													<div class="row">
-														<label class="col-sm-2" for="city">City/St/Zip: </label>
+														<label class="col-sm-2" for="serialNum">Serial #: </label>
+														<div class="col-sm-7">
+															<input type="text" class="form-control text" id="serialNum">
+														</div>
+														<div class="col-sm-3">
+															<button class="btn btn-default">Verify</button>
+														</div>
+													</div>
 
+													<div class="row">
+														<label class="col-sm-2" for="licenseNum">License #: </label>
 														<div class="col-sm-4">
-															<select class="form-control" id="city">
-                                                                 <option value="temp">Temp</option>
-                                                                <option value="temp">Temp</option>
-                                                                <option value="temp">Temp</option>
-                                                             </select>
+															<input type="text" class="form-control text" id="licenseNum">
 														</div>
 
+														<label class="col-sm-1" for="licenseState">State:</label>
 														<div class="col-sm-3">
-															<select class="form-control" id="state">
-																<option value="temp">OH</option>
-																<option value="temp">Temp</option>
-																<option value="temp">Temp</option>
+															<select class="form-control" id="licenseState">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
 															</select>
 														</div>
+													</div>
 
-														<div class="col-sm-3">
-															<input type="text" class="form-control text" id="zip">
+													<div class="row">
+														<label class="col-sm-2" for="odometer">Odometer: </label>
+														<div class="col-sm-6">
+															<input type="text" class="form-control text" id="odometer">
 														</div>
 													</div>
-												</div>
 
-												<div class="row">
-													<label class="col-sm-2" for="landmark">Landmark: </label>
-													<div class="col-sm-10">
-														<div class="input-group">
-															<input type="text" class="form-control text" id="landmark">
+													<div class="row">
+														<label class="col-sm-1" for="keys">Keys? </label>
+														<div class="col-sm-1">
+															<input type="checkbox" id="keys" value=""></label>
+														</div>
+														<label class="col-sm-2" for="keysLocation">Location:</label>
+														<div class="col-sm-8">
+															<select class="form-control" id="keyLocation">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+															</select>
 														</div>
 													</div>
-												</div>
 
+													<div class="row">
+														<label class="col-sm-2" for="unitNum1">Unit #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="unitNum1">
+														</div>
 
-												<div class="row">
-													<label class="col-sm-2" for="destination">Destination: </label>
-													<div class="col-sm-10">
-														<div class="input-group">
-															<input type="text" class="form-control text" id="destination">
+														<label class="col-sm-2" for="unitNum2">Unit #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="unitNum2">
 														</div>
 													</div>
-												</div>
-												<div class="row">
-													<label class="col-sm-2" for="cityDest">City/St/Zip: </label>
-													<div class="col-sm-3">
-														<select class="form-control" id="cityDest">
-															<option value="temp">Temp</option>
-															<option value="temp">Temp</option>
-															<option value="temp">Temp</option>
-														</select>
-													</div>
-
-													<div class="col-sm-3">
-														<select class="form-control" id="stateDest">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-
-													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="destZip">
-													</div>
-												</div>
-					
-
-												<div class="row">
-													<label class="col-sm-2" for="destLandmark">Dest. Landmark: </label>
-													<div class="col-sm-10">
-														<input type="text" class="form-control text" id="destLandmark">
-													</div>
-                                                    <label class="col-sm-2" for="reason">Reason:</label>
-													<div class="col-sm-10">
-														<select class="form-control" id="reason">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-												</div>
 
 
-												<div class="row">
-													<label class="col-sm-2" for="towType">Tow Type:</label>
-													<div class="col-sm-10">
-														<select class="form-control" id="towType">
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-												</div>
-
-												<div class="row">
-													<label class="col-sm-1" for="eta">ETA: </label>
-													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="eta">
-													</div>
-												</div>
-
-												
-
-												<div class="row">
-													<label class="col-sm-3" for="scheduledDate">Scheduled Date: </label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="usr">
-													</div>
-
-
-													<label class="col-sm-1" for="usr">Time: </label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="usr">
-													</div>
-												</div>
-
-												<div class="row">
-													<label class="col-sm-2" for="status">Status:   </label>
-													<div class="col-sm-10">
-														<input type="text" class="form-control text" id="status">
-													</div>
-												</div>
-
-												<div class="row">
-													<button type="button" class="btn btn-primary" data-target="#remarks" data-toggle="collapse">Add Remark</button>
-
-													<div id="remarks" class="collapse">
-														<div class="row">
-															<label class="col-sm-2" for="remark">Remarks </label>
-															<div class="col-sm-10">
-																<input type="text" class="form-control text" id="remark">
-															</div>
+													<div class="row">
+														<label class="col-sm-2" for="unitNum3">Unit #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="unitNum3">
 														</div>
-														<div class="row">
-															<div class="col-sm-2"></div>
-															<div class="col-sm-10">
-																<input type="text" class="form-control text" id="remark2">
-															</div>
+
+														<label class="col-sm-2" for="unitNum4">Unit #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="unitNum4">
 														</div>
 													</div>
-												</div>
 
 
-											</div>
+													<div class="row">
+														<label class="col-sm-2" for="batteryNum1">Battery #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="batteryNum1">
+														</div>
+
+														<label class="col-sm-2" for="batteryNum2">Battery #: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="batteryNum2">
+														</div>
+													</div>
+
+													<div class="row">
+														<label class="col-sm-2" for="height">Height: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="height">
+														</div>
+
+														<label class="col-sm-2" for="weight">Weight: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="weight">
+														</div>
+													</div>
 
 
-										</div>
-									</div>
-								</div>
+													<div class="row">
+														<label class="col-sm-2" for="width">Width: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="width">
+														</div>
 
+														<label class="col-sm-2" for="misc">Misc: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="misc">
+														</div>
+													</div>
 
-								<div class="col-sm-6">
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="tracker-header">
-												Billing Info
-											</h4>
-										</div>
-										<div class="panel-body">
-											<div class="form-group">
-												<div class="row">
-													<label class="col-sm-2" for="billTo">Bill to: </label>
-													<div class="col-sm-6">
-														<select class="form-control" id="billTo">
-                                                            <option value="temp">Temp</option>
-                                                           <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-													<div class="col-sm-4">
-														<button class="btn btn-default">Pre-Auth CC</button>
-													</div>
-												</div>
+													<div class="row">
+														<label class="col-sm-2" for="note1">Note 1: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="note1">
+														</div>
 
-												<div class="row">
-													<label class="col-sm-2" for="payMeth">Pay Method:</label>
-													<div class="col-sm-3">
-														<select class="form-control" id="payMeth">
-                                                            <option value="temp">Temp</option>
-                                                           <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-													<label class="col-sm-2" for="preAuth">Pre-Authorization #: </label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="preAuth">
-													</div>
-												</div>
-
-												<div class="row">
-													<label class="col-sm-2" for="creditNum">Credit Card: </label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="creditNum">
-													</div>
-													<label class="col-sm-2" for="expdate">Exp. Date: </label>
-													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="expdate">
-													</div>
-												</div>
-
-												<div class="row">
-													<label class="col-sm-2" for="billZip">Billing Zip:</label>
-													<div class="col-sm-5">
-														<input type="text" class="form-control text" id="billZip">
-													</div>
-													<label class="col-sm-1" for="cv2">CV2: </label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="cv2">
-													</div>
-												</div>
-
-												<div class="row">
-													<label class="col-sm-2" for="purchOrder">Purch Ord:</label>
-													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="purchorder">
-													</div>
-                                                    <label class="col-sm-3" for="pricingMode">Pricing Mode: </label>
-													<div class="col-sm-3">
-														<select class="form-control" id="pricingMode">
-                                                            <option value="temp">Temp</option>
-                                                           <option value="temp">Temp</option>
-                                                            <option value="temp">Temp</option>
-                                                        </select>
-													</div>
-												</div>
-								
-											<div class="row">
-												<button type="button" class="btn btn-primary" data-target="#comments" data-toggle="collapse">Add Comment</button>
-												<div id="comments" class="collapse">
-													<div class="form-group">
-														<label for="comment">Comment:</label>
-														<textarea class="form-control" rows="5" id="comment"></textarea>
+														<label class="col-sm-2" for="note2">Note 2: </label>
+														<div class="col-sm-4">
+															<input type="text" class="form-control text" id="note2">
+														</div>
 													</div>
 												</div>
 											</div>
@@ -552,8 +302,288 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+
+								
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+										</div>
+										<div class="col-sm-6">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="tracker-header">
+														Tow Info
+													</h4>
+												</div>
+												<div class="panel-body">
+													<div class="townInfo">
+														<div class="form-group">
+															<div class="row">
+																<label class="col-sm-2" for="location">Location: </label>
+																<div class="col-sm-10">
+																	<div class="input-group">
+																		<input type="text" class="form-control text" id="location">
+																		<span class="input-group-btn">
+																	<button class="btn btn-default" type="button">View Map</button></span>
+																	</div>
+																</div>
+															</div>
+
+															<div class="row">
+																<label class="col-sm-2" for="city">City/St/Zip: </label>
+
+																<div class="col-sm-4">
+																	<select class="form-control" id="city">
+																		<option value="temp">Temp</option>
+																		<option value="temp">Temp</option>
+																		<option value="temp">Temp</option>
+																	</select>
+																</div>
+
+																<div class="col-sm-3">
+																	<select class="form-control" id="state">
+																		<option value="temp">OH</option>
+																		<option value="temp">Temp</option>
+																		<option value="temp">Temp</option>
+																	</select>
+																</div>
+
+																<div class="col-sm-3">
+																	<input type="text" class="form-control text" id="zip">
+																</div>
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="landmark">Landmark: </label>
+															<div class="col-sm-10">
+																<div class="input-group">
+																	<input type="text" class="form-control text" id="landmark">
+																</div>
+															</div>
+														</div>
+
+
+														<div class="row">
+															<label class="col-sm-2" for="destination">Destination: </label>
+															<div class="col-sm-10">
+																<div class="input-group">
+																	<input type="text" class="form-control text" id="destination">
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<label class="col-sm-2" for="cityDest">City/St/Zip: </label>
+															<div class="col-sm-3">
+																<select class="form-control" id="cityDest">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+
+															<div class="col-sm-3">
+																<select class="form-control" id="stateDest">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+
+															<div class="col-sm-3">
+																<input type="text" class="form-control text" id="destZip">
+															</div>
+														</div>
+							
+
+														<div class="row">
+															<label class="col-sm-2" for="destLandmark">Dest. Landmark: </label>
+															<div class="col-sm-10">
+																<input type="text" class="form-control text" id="destLandmark">
+															</div>
+															<label class="col-sm-2" for="reason">Reason:</label>
+															<div class="col-sm-10">
+																<select class="form-control" id="reason">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+														</div>
+
+
+														<div class="row">
+															<label class="col-sm-2" for="towType">Tow Type:</label>
+															<div class="col-sm-10">
+																<select class="form-control" id="towType">
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-1" for="eta">ETA: </label>
+															<div class="col-sm-3">
+																<input type="text" class="form-control text" id="eta">
+															</div>
+														</div>
+
+														
+
+														<div class="row">
+															<label class="col-sm-3" for="scheduledDate">Scheduled Date: </label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="usr">
+															</div>
+
+
+															<label class="col-sm-1" for="usr">Time: </label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="usr">
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="status">Status:   </label>
+															<div class="col-sm-10">
+																<input type="text" class="form-control text" id="status">
+															</div>
+														</div>
+
+														<div class="row">
+															<button type="button" class="btn btn-primary" data-target="#remarks" data-toggle="collapse">Add Remark</button>
+
+															<div id="remarks" class="collapse">
+																<div class="row">
+																	<label class="col-sm-2" for="remark">Remarks </label>
+																	<div class="col-sm-10">
+																		<input type="text" class="form-control text" id="remark">
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-sm-2"></div>
+																	<div class="col-sm-10">
+																		<input type="text" class="form-control text" id="remark2">
+																	</div>
+																</div>
+															</div>
+														</div>
+
+
+													</div>
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+										</div>
+										<div class="col-sm-6">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="tracker-header">
+														Billing Info
+													</h4>
+												</div>
+												<div class="panel-body">
+													<div class="form-group">
+														<div class="row">
+															<label class="col-sm-2" for="billTo">Bill to: </label>
+															<div class="col-sm-6">
+																<select class="form-control" id="billTo">
+																	<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+															<div class="col-sm-4">
+																<button class="btn btn-default">Pre-Auth CC</button>
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="payMeth">Pay Method:</label>
+															<div class="col-sm-3">
+																<select class="form-control" id="payMeth">
+																	<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+															<label class="col-sm-2" for="preAuth">Pre-Authorization #: </label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="preAuth">
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="creditNum">Credit Card: </label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="creditNum">
+															</div>
+															<label class="col-sm-2" for="expdate">Exp. Date: </label>
+															<div class="col-sm-3">
+																<input type="text" class="form-control text" id="expdate">
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="billZip">Billing Zip:</label>
+															<div class="col-sm-5">
+																<input type="text" class="form-control text" id="billZip">
+															</div>
+															<label class="col-sm-1" for="cv2">CV2: </label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="cv2">
+															</div>
+														</div>
+
+														<div class="row">
+															<label class="col-sm-2" for="purchOrder">Purch Ord:</label>
+															<div class="col-sm-4">
+																<input type="text" class="form-control text" id="purchorder">
+															</div>
+															<label class="col-sm-3" for="pricingMode">Pricing Mode: </label>
+															<div class="col-sm-3">
+																<select class="form-control" id="pricingMode">
+																	<option value="temp">Temp</option>
+																<option value="temp">Temp</option>
+																	<option value="temp">Temp</option>
+																</select>
+															</div>
+														</div>
+										
+													<div class="row">
+														<button type="button" class="btn btn-primary" data-target="#comments" data-toggle="collapse">Add Comment</button>
+														<div id="comments" class="collapse">
+															<div class="form-group">
+																<label for="comment">Comment:</label>
+																<textarea class="form-control" rows="5" id="comment"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12">
+									<div class="col-sm-5">
+									</div>
+										<button class="btn btn-default col-sm-2">Submit</button>
+									
+								</div>
+								</div>
 				</form>
 			</div>
 		</div>
