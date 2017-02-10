@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="http://trackermanagement.com/css/style.css">
 	<link rel="stylesheet" href="http://trackermanagement.com/css/responsive-style.css">
 	<link rel="stylesheet" href="dispatch.css">
-	<script src="dispatchActions.js"></script>
+	<script src="newCall.js"></script>
 	
 </head>
 
@@ -50,7 +50,7 @@
 		</nav>
 		<div class="container">
 			<div class="row-fluid">
-					<form class="form-inline">
+					<form id="callForm" class="form-inline">
 
 						<div class="row">
 							<div class="col-sm-12">
@@ -66,7 +66,7 @@
 											<div class="row">
 												<label class="col-sm-2" for="rqedBy">Rqed by:</label>
 												<div class="col-sm-7">
-													<select class="form-control select" id="rqedBy">
+													<select class="form-control select" name="rqedBy" id="rqedBy">
 														<option value="temp">Temp</option>
 														<option value="temp">Temp</option>
 														<option value="temp">Temp</option>
@@ -74,18 +74,18 @@
 												</div>
 												<label class="col-sm-1" for="pr">Pr:</label>
 												<div class="col-sm-2">
-													<input type="text" class="form-control text" name="pr" placeholder="1">
+													<input type="text" class="form-control text" name="pr" placeholder="1" id="pr">
 												</div>
 											</div>
 											<div class="row">	
 												<label class="col-sm-2" for="phone">Phone: </label>
 												<div class="col-sm-6">
-													<input type="tel" class="form-control text" placeholder="(111)-111-1111" name="phone">
+													<input type="tel" class="form-control text has-error" placeholder="(111)-111-1111" name="phone" id="phone">
 												</div>
 
 												<label class="col-sm-1" for="ext">Ext: </label>
 												<div class="col-sm-3">
-													<input type="text" class="form-control text" placeholder="1" id="ext">
+													<input type="text" class="form-control text" placeholder="1" name="ext" id="ext">
 												</div>
 
 											</div>
@@ -93,7 +93,7 @@
 											<div class="row">
 												<label class="col-sm-2" for="caller">Caller: </label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control text" name="caller">
+													<input type="text" class="form-control text" name="caller" id="caller">
 												</div>
 											</div>
 
@@ -101,18 +101,18 @@
 											<div class="row">
 												<label class="col-sm-2" for="ownerPhone">Owner Phone: </label>
 												<div class="col-sm-6">
-													<input type="tel" class="form-control text" placeholder="(111)-111-1111" id="ownerPhone">
+													<input type="tel" class="form-control text" placeholder="(111)-111-1111" name="ownerPhone" id="ownerPhone">
 												</div>
 
 												<label class="col-sm-1" for="ownerExt">Ext: </label>
 												<div class="col-sm-3">
-													<input type="text" class="form-control text" placeholder="1" id="ownerExt">
+													<input type="text" class="form-control text" placeholder="1" name="ownerExt" id="ownerExt">
 												</div>
 											</div>
 											<div class="row">
 												<label class="col-sm-2" for="owner">Owner: </label>
 												<div class="col-sm-10">
-													<input type="text" class="form-control text" id="owner">
+													<input type="text" class="form-control text" name="owner" id="owner">
 												</div>
 											</div>
 										</div>
@@ -138,13 +138,13 @@
 											<div class="row">
 												<label class="col-sm-2" for="year">Year:</label>
 												<div class="col-sm-3">
-													<input type="text" class="form-control text" id="year">
+													<input type="text" class="form-control text" name="year" id="year">
 												</div>
 											</div>
 											<div class="row">
 												<label class="col-sm-2" for="make">Make:</label>
 												<div class="col-sm-4">
-													<select class="form-control" id="make">
+													<select class="form-control" name="make" id="make">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -152,7 +152,7 @@
 												</div>
 												<label class="col-sm-2" for="model">Model:</label>
 												<div class="col-sm-4">
-													<select class="form-control" id="model">
+													<select class="form-control" name="model" id="model">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -165,7 +165,7 @@
 											<div class="row">
 												<label class="col-sm-2" for="style">Style:</label>
 												<div class="col-sm-4">
-													<select class="form-control" id="style">
+													<select class="form-control" name="style" id="style">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -173,7 +173,7 @@
 												</div>
 												<label class="col-sm-2" for="color">Color:</label>
 												<div class="col-sm-4">
-													<select class="form-control" id="color">
+													<select class="form-control" name="color" id="color">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -185,7 +185,7 @@
 												<label class="col-sm-2" for="vin">V.I.N.: </label>
 												<div class="col-sm-10">
 													<div class="input-group">
-													<input type="text" class="form-control text" id="vin">
+													<input type="text" class="form-control text" name="vin" id="vin">
 													<span class="input-group-btn">
 														<button class="btn btn-default">VIN Check</button>
 													</span>
@@ -197,12 +197,12 @@
 											<div class="row">
 												<label class="col-sm-2" for="licenseNum">License #: </label>
 												<div class="col-sm-4">
-													<input type="text" class="form-control text" id="licenseNum">
+													<input type="text" class="form-control text" name="licenseNum" id="licenseNum">
 												</div>
 
 												<label class="col-sm-2" for="licenseState">State:</label>
 												<div class="col-sm-3">
-													<select class="form-control" id="licenseState">
+													<select class="form-control" name="licenseState" id="licenseState">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -212,17 +212,17 @@
 											<div class="row">
 												<label class="col-sm-2" for="odometer">Odometer: </label>
 												<div class="col-sm-6">
-													<input type="text" class="form-control text" id="odometer">
+													<input type="text" class="form-control text" name="odometer" id="odometer">
 												</div>
 												<label class="col-sm-2" for="keys">Keys? </label>
 												<div class="col-sm-1">
-													<input type="checkbox" id="keys" value=""></label>
+													<input type="checkbox" name="keys" id="keys" value=""></label>
 												</div>
 											</div>
 											<div class="row">
-												<label class="col-sm-2" for="keysLocation">Location:</label>
+												<label class="col-sm-2" for="keyLocation">Location:</label>
 												<div class="col-sm-10">
-													<select class="form-control" id="keyLocation">
+													<select class="form-control" name="keyLocation" id="keyLocation">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -255,7 +255,7 @@
 														<label class="col-sm-2" for="location">Location: </label>
 														<div class="col-sm-10">
 															<div class="input-group">
-																<input type="text" class="form-control text" id="location">
+																<input type="text" class="form-control text" name="location" id="location">
 																<span class="input-group-btn">
                                                             		<button class="btn btn-default" type="button">Map</button>
 																</span>
@@ -264,10 +264,9 @@
 													</div>
 
 													<div class="row">
-														<label class="col-sm-2" for="city">City/St/Zip: </label>
-
+														<label class="col-sm-2" for="towLocation">City/St/Zip: </label>
 														<div class="col-sm-3">
-															<select class="form-control" id="city">
+															<select class="form-control" name="city" id="city">
                                                                  <option value="temp">Temp</option>
                                                                 <option value="temp">Temp</option>
                                                                 <option value="temp">Temp</option>
@@ -275,7 +274,7 @@
 														</div>
 
 														<div class="col-sm-3">
-															<select class="form-control" id="state">
+															<select class="form-control" name="state" id="state">
 																<option value="temp">OH</option>
 																<option value="temp">Temp</option>
 																<option value="temp">Temp</option>
@@ -283,7 +282,7 @@
 														</div>
 
 														<div class="col-sm-3">
-															<input type="text" class="form-control text" id="zip">
+															<input type="text" class="form-control text" name="zip" id="zip">
 														</div>
 													</div>
 												</div>
@@ -292,7 +291,7 @@
 													<label class="col-sm-2" for="landmark">Landmark: </label>
 													<div class="col-sm-10">
 														<div class="input-group">
-															<input type="text" class="form-control text" id="landmark">
+															<input type="text" class="form-control text" name="landmark" id="landmark">
 															<span class="input-group-btn">
                                                             <button class = "btn btn-default" type = "button">Map</button></span>
 														</div>
@@ -304,16 +303,16 @@
 													<label class="col-sm-2" for="destination">Destination: </label>
 													<div class="col-sm-10">
 														<div class="input-group">
-															<input type="text" class="form-control text" id="destination">
+															<input type="text" class="form-control text" name="destination" id="destination">
 															<span class="input-group-btn">
                                                             <button class = "btn btn-default" type = "button">Map</button></span>
 														</div>
 													</div>
 												</div>
 												<div class="row">
-													<label class="col-sm-2" for="cityDest">City/St/Zip: </label>
+													<label class="col-sm-2" for="destLocation">City/St/Zip: </label>
 													<div class="col-sm-3">
-														<select class="form-control" id="cityDest">
+														<select class="form-control" name="cityDest" id="cityDest">
 															<option value="temp">Temp</option>
 															<option value="temp">Temp</option>
 															<option value="temp">Temp</option>
@@ -321,7 +320,7 @@
 													</div>
 
 													<div class="col-sm-3">
-														<select class="form-control" id="stateDest">
+														<select class="form-control" name="stateDest" id="stateDest">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -329,14 +328,14 @@
 													</div>
 
 													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="destZip">
+														<input type="text" class="form-control text" name="destZip" id="destZip">
 													</div>
 												</div>
 												<div class="row">
 													<label class="col-sm-2" for="landmark">Landmark: </label>
 													<div class="col-sm-10">
 														<div class="input-group">
-															<input type="text" class="form-control text" id="landmark">
+															<input type="text" class="form-control text" name="landmark" id="landmark">
 															<span class="input-group-btn">
                                                             <button class = "btn btn-default" type = "button">Map</button></span>
 														</div>
@@ -356,9 +355,9 @@
 														</div>
 													</div>-->
 
-													<label class="col-sm-2" for="lot">Impound:</label>
+													<label class="col-sm-2" for="isImpound">Impound:</label>
 													<div class="col-sm-2">
-														<select class="form-control" id="lot">
+														<select class="form-control" name="isImpound" id="isImpound">
                                                             <option value="temp">No</option>
                                                             <option value="temp">Yes</option>
                                                         </select>
@@ -366,7 +365,7 @@
 
 													<label class="col-sm-1" for="lot">Lot:</label>
 													<div class="col-sm-2">
-														<select class="form-control" id="lot">
+														<select class="form-control" name="lot" id="lot">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -375,7 +374,7 @@
 
 													<label class="col-sm-2" for="reason">Reason:</label>
 													<div class="col-sm-3">
-														<select class="form-control" id="reason">
+														<select class="form-control" name="reason" id="reason">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -387,7 +386,7 @@
 												<div class="row">
 													<label class="col-sm-2" for="towType">Tow Type:</label>
 													<div class="col-sm-10">
-														<select class="form-control" id="towType">
+														<select class="form-control" name="towType" id="towType">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -398,18 +397,18 @@
 												<div class="row">
 													<label class="col-sm-2" for="eta">ETA: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="eta">
+														<input type="text" class="form-control text" name="eta" id="eta">
 													</div>
 													<label class="col-sm-3" for="truckType">Truck Type Required:</label>
 													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="usr">
+														<input type="text" class="form-control text" name="truckType" id="truckType">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="locationZone">Location Zone:</label>
 													<div class="col-sm-4">
-														<select class="form-control" id="locationZone">
+														<select class="form-control" name="locationZone" id="locationZone">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -418,7 +417,7 @@
 
 													<label class="col-sm-2" for="destZone">Destination Zone:</label>
 													<div class="col-sm-4">
-														<select class="form-control" id="destZone">
+														<select class="form-control" name="destZone" id="destZone">
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -429,20 +428,20 @@
 												<div class="row">
 													<label class="col-sm-2" for="scheduledDate">Scheduled Date: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="usr">
+														<input type="text" class="form-control text" name="scheduledDate" id="scheduledDate">
 													</div>
 
 
-													<label class="col-sm-2" for="usr">Time: </label>
+													<label class="col-sm-2" for="scheduledTime">Time: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="usr">
+														<input type="text" class="form-control text" name="scheduledTime" id="scheduledTime">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="status">Status:   </label>
 													<div class="col-sm-10">
-														<input type="text" class="form-control text" id="status">
+														<input type="text" class="form-control text" name="status" id="status">
 													</div>
 												</div>
 
@@ -452,13 +451,13 @@
 														<div class="row">
 															<label class="col-sm-2" for="remark">Remarks </label>
 															<div class="col-sm-10">
-																<input type="text" class="form-control text" id="remark">
+																<input type="text" class="form-control text" name="remark" id="remark">
 															</div>
 														</div>
 														<div class="row">
 															<div class="col-sm-2"></div>
 															<div class="col-sm-10">
-																<input type="text" class="form-control text" id="remark2">
+																<input type="text" class="form-control text" name="remark2" id="remark2">
 															</div>
 														</div>
 													</div>
@@ -486,9 +485,9 @@
 												<div class="row">
 													<label class="col-sm-2" for="billTo">Bill to: </label>
 													<div class="col-sm-6">
-														<select class="form-control" id="billTo">
+														<select class="form-control" name="billTo" id="billTo">
                                                             <option value="temp">Temp</option>
-                                                           <option value="temp">Temp</option>
+                                                            <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
                                                         </select>
 													</div>
@@ -500,7 +499,7 @@
 												<div class="row">
 													<label class="col-sm-2" for="payMeth">Pay Meth:</label>
 													<div class="col-sm-3">
-														<select class="form-control" id="payMeth">
+														<select class="form-control" name="payMeth" id="payMeth">
                                                             <option value="temp">Temp</option>
                                                            <option value="temp">Temp</option>
                                                             <option value="temp">Temp</option>
@@ -508,64 +507,64 @@
 													</div>
 													<label class="col-sm-2" for="quoted">Quoted: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="quoted">
+														<input type="text" class="form-control text" name="quoted" id="quoted">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="creditNum">Credit Card: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="creditNum">
+														<input type="text" class="form-control text" name="creditNum" id="creditNum">
 													</div>
-													<label class="col-sm-1" for="expdate">Exp. Date: </label>
+													<label class="col-sm-1" for="expDate">Exp. Date: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="expdate">
+														<input type="text" class="form-control text" name="expDate" id="expDate">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="billZip">Billing Zip:</label>
 													<div class="col-sm-5">
-														<input type="text" class="form-control text" id="billZip">
+														<input type="text" class="form-control text" name="billZip" id="billZip">
 													</div>
 													<label class="col-sm-1" for="cv2">CV2: </label>
 													<div class="col-sm-4">
-														<input type="text" class="form-control text" id="cv2">
+														<input type="text" class="form-control text" name="cv2" id="cv2">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="purchOrder">Purch Ord:</label>
 													<div class="col-sm-10">
-														<input type="text" class="form-control text" id="purchorder">
+														<input type="text" class="form-control text" name="purchOrder" id="purchOrder">
 													</div>
 												</div>
 
 												<div class="row">
 													<label class="col-sm-2" for="memberNum">Member #:</label>
 													<div class="col-sm-6">
-														<input type="text" class="form-control text" id="memberNum">
+														<input type="text" class="form-control text" name="memberNum" id="memberNum">
 													</div>
 													<label class="col-sm-1" for="memberExp">Exp: </label>
 													<div class="col-sm-3">
-														<input type="text" class="form-control text" id="memberExp">
+														<input type="text" class="form-control text" name="memberExp" id="memberExp">
 													</div>
 												</div>
 											<div class="row">
 												<label class="col-sm-2" for="test6">Test 6: </label> 
                                                 <div class="col-sm-4">
-                                                	<input type="text" class="form-control text" id="usr">
+                                                	<input type="text" class="form-control text" name="test6" id="test6">
                                                 </div>
 												<label class="col-sm-2" for="test7">Test 7: </label> 
                                                 <div class="col-sm-4">
-                                                	<input type="text" class="form-control text" id="usr">
+                                                	<input type="text" class="form-control text" name="test7" id="test7">
                                                 </div>
 											</div>
                                         
 											<div class="row">	
                                                 <label class="col-sm-2" for="pricingMode">Pricing Mode: </label>
 												<div class="col-sm-3">
-													<select class="form-control" id="pricingMode">
+													<select class="form-control" name=pricingMode" id="pricingMode">
                                                         <option value="temp">Temp</option>
                                                         <option value="temp">Temp</option>
                                                         <option value="temp">Temp</option>
@@ -578,7 +577,7 @@
 												<div id="comments" class="collapse">
 													<div class="form-group">
 														<label for="comment">Comment:</label>
-														<textarea class="form-control" rows="5" id="comment"></textarea>
+														<textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
 													</div>
 												</div>
 											</div>
@@ -593,8 +592,8 @@
 									<div class="col-sm-12">
 									<div class="col-sm-5">
 									</div>
-										<button class="btn btn-default col-sm-2">Submit</button>
-									
+									<!--	<button class="btn btn-default col-sm-2">Submit</button> -->
+										<input type="submit" class="btn btn-primary col-sm-2" value="submit">
 								</div>
 								</div>
 						
