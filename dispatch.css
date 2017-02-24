@@ -25,8 +25,13 @@ select {
 input.text {
     max-width: 100%;
     min-width: 100%;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.input-error {
+    background-color: #f2dede;
+    border-color: #843534;
 }
 
 label {
@@ -104,4 +109,8 @@ label {
 
 .buttonGroupFilter{
     margin-left: 20%;
+}
+
+.form-has-error{
+    background-color: #843534
 }
